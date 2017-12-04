@@ -8,17 +8,15 @@ public class DayOnePartTwo{
 		while(in.hasNext()){
 			vals = new LinkedList();
 			String list = in.next();
-			for(int i = 0; i < list.length()-1; i++){
+			for(int i = 0; i < list.length(); i++){
 				if(matches(list, i))
 					vals.add(Integer.valueOf(list.charAt(i)));
 				
 			}
-			if(Integer.valueOf(list.charAt(list.length() - 1)) 
-				== Integer.valueOf(list.charAt(0)))
-				vals.add(Integer.valueOf(list.charAt(0)));
+		
 			toReturn = addAll(vals);
 			
-			System.out.println(toReturn);
+			System.out.println("Final: " + toReturn);
 			
 		}
 	
@@ -30,8 +28,9 @@ public class DayOnePartTwo{
 		int toReturn = 0;
 			for(int i = 0; i < nums.size(); i++){
 				toReturn += (Integer.valueOf(nums.get(i))-48);
+				System.out.println("Update: " + toReturn);
 			}
-		return toReturn / 2;
+		return toReturn;
 	}
 	
 	public static boolean matches(String list, int index){
