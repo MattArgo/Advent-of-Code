@@ -54,17 +54,5 @@ public class DayFourPartTwo{
 		}
 		return alphabet;
 	}
-	
-	public static boolean noRepeat(String[] words){
-		LinkedList<String> phraseCheck = new LinkedList();
-		for(String p: words){
-			if(!phraseCheck.contains(p)){
-				phraseCheck.add(p);
-			}
-			else{
-				return false;
-			}
-		}
-		return true;
-	}
+
 }
